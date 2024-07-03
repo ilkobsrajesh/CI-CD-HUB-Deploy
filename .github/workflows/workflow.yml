@@ -30,9 +30,6 @@ jobs:
           repository: blackducksoftware/hub
           ref: main
           token: ${{ secrets.PAT }}
-        run: |
-          echo "Checking out other repository..."
-          echo "Other repository checked out."
       - name: Download Latest Release
         id: download-release
         run: |
