@@ -19,7 +19,7 @@ jobs:
           ref: latest
       - name: Set Release Name Output
         id: set-release-name
-        run: echo "::set-output name=release-name::$(basename ${GITHUB_REF})-$(date +'%Y%m%d%H%M%S')"
+        run: echo "::set-output name=release-name::$(basename ${GITHUB_REF})-$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
       - name: Copy Release to Target Server
         run: |
           sudo apt-get update
